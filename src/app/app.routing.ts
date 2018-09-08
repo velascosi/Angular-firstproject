@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouteModule, Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { VideoListComponent } from './src/app/video-list/video-list.component';
+import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 
 const appRoutes: Routes = [
+    {
+    path: "",
+    component: VideoListComponent,
+    },
     {
     path: "videos",
     component: VideoListComponent,
@@ -25,4 +29,4 @@ const appRoutes: Routes = [
             RouterModule
         ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule{}
