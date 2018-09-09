@@ -1,7 +1,7 @@
 <p>
   {{title}}
 </p>
-<p *ngFor='let item in videoList'>
+<p *ngFor='let item of videoList'>
   <a href='videos/{{ item.slug }}' *ngif='item.slug == "item-1"'>{{ item.name }}</a>
-  <a href='videos/{{ item.slug }}' *ngif='item.slug != "item-1"'style='color:red;'>{{ item.name }}</a>
+  <a href='videos/{{ item.slug }}' *ngif='item.slug != "item-1"' style='color:red;'>{{ item.name }}</a>
 </p>
