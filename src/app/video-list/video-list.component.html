@@ -1,7 +1,13 @@
 <p>
-  {{title}}
+  {{Meus videos}}
 </p>
-<p *ngFor='let item of videoList'>
-  <a href='videos/{{ item.slug }}' *ngif='item.slug == "item-1"'>{{ item.name }}</a>
-  <a href='videos/{{ item.slug }}' *ngif='item.slug != "item-1"' style='color:red;'>{{ item.name }}</a>
-</p>
+<div *ngFor='let item of videoList'>
+  <a href='videos/{{ item.slug }}' >{{ item.name }}</a>
+    <div [innerHTML]='item.embed'></div>
+    <div [innerHTML]='someItem'></div>
+
+    <div style="position:relative">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ item.embed }1TfUyZxfs0c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+</div>
